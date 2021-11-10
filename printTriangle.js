@@ -22,7 +22,7 @@ printSegitiga = (num) => {
     for (i = 1; i <= num; i++) {
         // inner loop will print horizontal
         for (j = 1; j <= num - i + 1; j++) {
-            pattern += j;
+            pattern += `${j} ` ;
         }
         pattern += '\n';
     }
@@ -30,5 +30,5 @@ printSegitiga = (num) => {
     return pattern;
 }
 
-console.log(printSegitiga(6));
+console.log(printSegitiga(5));
 
