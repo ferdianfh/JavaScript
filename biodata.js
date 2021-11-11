@@ -4,7 +4,7 @@ let biodata = {
     name: 'Ferdi Ferdiana',
     age: 22,
     hobbies: ['Menonton film', 'Memanah', 'Berkuda'],
-    isMarried: false,
+    isMarried: true,
     schoolList: [
         {
             name: 'SD Negeri 1 Pagundan',
