@@ -19,16 +19,20 @@
 printSegitiga = (num) => {
     let pattern = '';
 
-    for (i = 1; i <= num; i++) {
-        // inner loop will print horizontal
-        for (j = 1; j <= num - i + 1; j++) {
-            pattern += `${j} ` ;
+    if (typeof num === "number") {
+        for (i = 1; i <= num; i++) {
+            // inner loop will print horizontal
+            for (j = 1; j <= num - i + 1; j++) {
+                pattern += `${j} ` ;
+            }
+            pattern += '\n';
         }
-        pattern += '\n';
+    } else {
+        return `Data harus number!`;
     }
+    
 
     return pattern;
 }
 
-console.log(printSegitiga(5));
-
+console.log(printSegitiga(5)); 
