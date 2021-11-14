@@ -1,4 +1,4 @@
-// * Task 1
+// * Case 1
 
 let biodata = {
     name: 'Ferdi Ferdiana',
@@ -50,4 +50,5 @@ let biodata = {
     interestInCoding: true 
 }
 
+console.log(biodata);
 console.log(biodata.schoolList[2]);
