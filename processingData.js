@@ -1,6 +1,6 @@
-// * Task 4
+// * Case 4
 
-let data = {
+const data = {
     id: 1,
     name: 'Leanne Graham',
     username: 'Bret',
@@ -16,11 +16,18 @@ let data = {
 }
 
 // change data with spread operator
-let insertData = {...data, name:'Ferdi Ferdiana', email: 'ferdifh82@gmail.com', hobby: ['Menonton film', 'memanah', 'berkuda']};
+const newData = {
+    name:'Ferdi Ferdiana',
+    username: 'ferdifh', 
+    email: 'ferdifh82@gmail.com', 
+    hobby: ['Menonton film', 'Memanah', 'Berkuda']
+}
+let insertData = {...data, ...newData};
 
 console.log(insertData);
 
-// take data "street and city" with destructuring
+// take data "street" and "city" with destructuring
 const {address} = data;
 const {street, city} = address;
-console.log(`street name is ${street} and located in ${city} city`);
+
+console.log(`Street name is ${street} and located in ${city} city.`);
