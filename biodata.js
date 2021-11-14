@@ -1,6 +1,6 @@
 // * Case 1
 
-let biodata = {
+const biodata = {
     name: 'Ferdi Ferdiana',
     age: 22,
     hobbies: ['Menonton film', 'Memanah', 'Berkuda'],
@@ -50,5 +50,20 @@ let biodata = {
     interestInCoding: true 
 }
 
-console.log(biodata);
+// show value of variable
+console.log(`My name is ${biodata.name} and Hey! I don't know about you but I'm feeling ${biodata.age}!!`);
 console.log(biodata.schoolList[2]);
+
+// change value or insert new value
+biodata.isMarried = false;
+
+biodata.address = {
+    street: 'Jl. Desa Pagundan',
+    city: 'Kuningan',
+    postCode: 45574
+}
+console.log(biodata);
+
+// delete value
+delete biodata.address;
+console.log(biodata); 
