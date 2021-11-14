@@ -1,37 +1,40 @@
-//  * Task 3
+//  * Case 3
 
-//  * Pattern: Triangle
-// let number = 5;
-// let star = "";
+let printSegitiga = 5;
+let pattern = ``;
+
+// validate input
+if (typeof printSegitiga === `number`) {
+    // outer loop will iterate vertically
+    for (i = 1; i <= printSegitiga; i++) {
+        // inner loop will iterate horizontally
+        for (j = 1; j <= printSegitiga - i + 1; j++) {
+          pattern += `${j} `;
+        }
+        pattern += `\n`;
+    }
+    console.log(pattern);
+} else {
+    console.log(`Please input number only!`);
+}
 
 
-// for (i = 1; i <= number; i++) {
-//   for (j = 1; j <= number-i+1; j++) {
-//     star += j;
-//   }
-//   star += "\n";
-// }
+// * Case 3: Pattern in function
 
-// console.log(star);
-
-
-// * Pattern in function
 printSegitiga = (num) => {
-    let pattern = '';
+    let pattern = ``;
 
     if (typeof num === "number") {
         for (i = 1; i <= num; i++) {
-            // inner loop will print horizontal
             for (j = 1; j <= num - i + 1; j++) {
                 pattern += `${j} ` ;
             }
-            pattern += '\n';
+            pattern += `\n`;
         }
     } else {
         return `Data harus number!`;
     }
     
-
     return pattern;
 }
 
