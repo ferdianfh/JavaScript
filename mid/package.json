@@ -1,0 +1,14 @@
+{
+  "name": "revisepass",
+  "version": "1.0.0",
+  "description": "Encrypt and Decrypt password with CryptoJS",
+  "main": "revisePassword.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ferdi Ferdiana",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
