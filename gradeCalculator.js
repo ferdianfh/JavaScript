@@ -35,7 +35,7 @@ if (averageScore >= 90 && averageScore <= 100) {
 
 //* Case 2: Grade in function
 
-gradeCalculator = (bahasa, english, maths, science) => {
+const gradeCalculator = (bahasa, english, maths, science) => {
     const subjects = bahasa + english + maths + science;
     const averageScore = (subjects / 4);
     
