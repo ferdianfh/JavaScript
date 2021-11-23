@@ -133,8 +133,8 @@ console.log(fruits);
  * * Method ini tidak akan mengubah array asal
 */
 
-const animals = ["cat", "dog", "tiger", "monkey", "tapir"];
-let checkAnimal = animals.includes("monkey");
+const animals = ["cat", "dog", "tiger", "elephant", "monkey", "tapir"];
+let checkAnimal = animals.includes("dog");
 console.log(checkAnimal);
 console.log(animals);
 

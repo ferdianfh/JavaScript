@@ -22,6 +22,7 @@ const refineNumber = (firstValue, lastValue, dataArray) => {
         );
     
         const filteredValue = filtrate.sort(sortNumber);
+        
         if (filteredValue.length === 0) {
             return "No Number Refined! Please check your input!";
         } else {
@@ -30,4 +31,4 @@ const refineNumber = (firstValue, lastValue, dataArray) => {
     }
 }
 
-console.log(refineNumber(5, 17, [45, 20, 21, 25, 67, 13, 12, 8, 6]));
+console.log(refineNumber(6, 17, [45, 20, 21, 25, 67, 15]));
