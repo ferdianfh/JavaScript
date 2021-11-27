@@ -1,15 +1,13 @@
 // * Case 1: Array Methods in JavaScript
 
-
 // ! Method Array.prototype.reverse()
 /**
- * * Method reverse() digunakan untuk membalikan urutan element array 
+ * * Method reverse() digunakan untuk membalikan urutan element array
  * * Mengubah array asal
  */
 const num_reverse = [1, 2, 3, 4, 5];
 console.log(num_reverse.reverse());
 console.log(num_reverse);
-
 
 // ! Method Array.prototype.concat()
 /**
@@ -17,13 +15,12 @@ console.log(num_reverse);
  * * Menerima variable berisi array atau array literal
  * * Tidak mengubah array asal
  */
-const num_concat = [5, 6, 7, 8, 9, 10]
+const num_concat = [5, 6, 7, 8, 9, 10];
 const char_concat = ["a", "b", "c", "d", "e"];
 
 console.log(num_concat.concat(char_concat));
 console.log(num_concat.concat(char_concat, 100, 99, 98, 97));
 console.log(num_concat);
-
 
 // ! Method Array.prototype.slice()
 /**
@@ -45,7 +42,6 @@ console.log(num_slice.slice(3, 6));
 console.log(num_slice.slice());
 console.log(num_slice.slice(-5, -2));
 
-
 // ! Method Array.prototype.splice()
 /**
  * * Method splice() digunakan untuk menambah atau mengurangi element array
@@ -65,7 +61,6 @@ console.log(num_splice.splice(-4, 2));
 console.log(num_splice.splice(4));
 console.log(num_splice);
 
-
 // ! Method Array.prototype.join()
 /**
  * * Method join() menggabungkan element array menjadi String
@@ -81,7 +76,6 @@ console.log(fruits.join("-"));
 console.log(fruits.join(", "));
 console.log(fruits);
 
-
 // ! Method Array.prototype.push()
 /**
  * * Method push() digunakan untuk menambah element baru dari posisi element terakhir
@@ -90,7 +84,6 @@ console.log(fruits);
 
 fruits.push("Kedondong", "Melinjo");
 console.log(fruits);
-
 
 // ! Method Array.prototype.pop()
 /**
@@ -101,7 +94,6 @@ console.log(fruits);
 fruits.pop();
 console.log(fruits);
 
-
 // ! Method Array.prototype.unshift()
 /**
  * * Method unshift() digunakan untuk menambah element baru di posisi awal array
@@ -109,7 +101,6 @@ console.log(fruits);
  */
 fruits.unshift("grape", "coconut");
 console.log(fruits);
-
 
 // ! Method Array.prototype.shift()
 /**
@@ -121,7 +112,6 @@ console.log(fruits);
 fruits.shift();
 console.log(fruits);
 
-
 // ! Method Array.prototype.includes()
 /**
  * * Method includes() digunakan untuk mengecek "keberadaan" suatu element dalam array
@@ -129,15 +119,14 @@ console.log(fruits);
  * * bisa memiliki 2 argument:
  * *    1) Argument pertama, element yang akan dicari
  * *    2) Argument kedua (opsional), index awal pengecekan,
- * *       - Jika tidak diisi, dianggap 0, akan dicari dari index paling awal 
+ * *       - Jika tidak diisi, dianggap 0, akan dicari dari index paling awal
  * * Method ini tidak akan mengubah array asal
-*/
+ */
 
 const animals = ["cat", "dog", "tiger", "elephant", "monkey", "tapir"];
 let checkAnimal = animals.includes("dog");
 console.log(checkAnimal);
 console.log(animals);
-
 
 // ! Method Array.prototype.sort()
 /**
