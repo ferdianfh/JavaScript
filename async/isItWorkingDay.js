@@ -25,23 +25,25 @@ const resolvedValue = (resolve) => {
 };
 const rejectedValue = (reject) => {
   console.log(reject);
-  setTimeout(() => {
-    console.log("Yeay! Selamat rebahan! hehe>.<");
-  }, 1000);
+  console.log("Selamat berlibur dan menikmati waktu luang!");
 };
 
-cekHariKerja("Minggu").then(resolvedValue).catch(rejectedValue);
+cekHariKerja("Sabtu").then(resolvedValue).catch(rejectedValue);
 
 // error handling with try-catch
 const check = async () => {
   try {
-    let day = await cekHariKerja("MingGU");
-    console.log(`Masih hari ${day}. Ayo Kerja!`);
+    let day = await cekHariKerja("Rabu");
+    console.log(`Hari ${day} adalah hari kerja. Selamat bekerja!`);
   } catch (error) {
     console.log(error.name);
     console.log(error.message);
     console.log(error.stack);
-    console.log("Yeay bisa rebahan! :P");
+    console.log("Selamat berlibur dan istirahat!");
+  } finally {
+    setTimeout(() => {
+      console.log("Cek hari lain?");
+    }, 1000);
   }
 };
 check();

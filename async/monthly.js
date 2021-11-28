@@ -2,7 +2,7 @@
 
 const getMonth = (callback) => {
   setTimeout(() => {
-    let error = false;
+    let error = false; // error status
     let month = [
       "January",
       "February",
@@ -18,6 +18,7 @@ const getMonth = (callback) => {
       "December",
     ];
     if (!error) {
+      // condition based error status
       callback(null, month);
     } else {
       callback(new Error("Sorry Data Not Found", []));
@@ -35,6 +36,7 @@ const displayData = (value) => {
 
 // it will display data based on error status
 const displayMonth = (errorMessage, data) => {
+  // condition based error message
   if (errorMessage === null) {
     let months = data.map(displayData);
     console.log(months);
