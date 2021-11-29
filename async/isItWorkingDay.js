@@ -27,8 +27,16 @@ const rejectedValue = (reject) => {
   console.log(reject);
   console.log("Selamat berlibur dan menikmati waktu luang!");
 };
+const finalValue = () => {
+  setTimeout(() => {
+    console.log("Cek hari lain?");
+  }, 1000);
+};
 
-cekHariKerja("Sabtu").then(resolvedValue).catch(rejectedValue);
+cekHariKerja("Sabtu")
+  .then(resolvedValue)
+  .catch(rejectedValue)
+  .finally(finalValue);
 
 // error handling with try-catch
 const check = async () => {

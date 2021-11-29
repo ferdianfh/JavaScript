@@ -60,8 +60,13 @@ const rejectedValue = (reject) => {
     "Keyword that you input is not match with the names in Database!"
   );
 };
+const finalValue = () => {
+  setTimeout(() => {
+    console.log("Do you want to try other keyword?");
+  }, 1000);
+};
 
-filterName("di").then(resolvedValue).catch(rejectedValue);
+filterName("di").then(resolvedValue).catch(rejectedValue).finally(finalValue);
 
 // handling error with try-catch
 const checkError = async () => {
