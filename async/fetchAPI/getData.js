@@ -13,7 +13,7 @@ const getDatafromServer = async () => {
     const dataAPI = await fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((dataJson) => {
-        dataJson.forEach(filtering);
+        dataJson.map(filtering);
       });
     return dataAPI;
   } catch (error) {
