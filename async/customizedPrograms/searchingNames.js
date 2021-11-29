@@ -1,33 +1,6 @@
 // * Case 3: Program 1 - Searching Names
 
-const people = [
-  "Zayn",
-  "Kurt",
-  "Guido van Rossum",
-  "Simon",
-  "Mirici",
-  "Layla",
-  "Lucas",
-  "Lucy",
-  "Ferdi",
-  "Michael",
-  "Abigail",
-  "Alexandra",
-  "Alison",
-  "Amanda",
-  "Angela",
-  "Bella",
-  "Carol",
-  "Caroline",
-  "Carolyn",
-  "Deidre",
-  "Diana",
-  "Elizabeth",
-  "Ella",
-  "Faith",
-  "Olivia",
-  "Penelope",
-];
+const { people } = require("./database");
 
 // main function
 const filterName = (keyword) => {
@@ -69,9 +42,9 @@ const finalValue = () => {
 filterName("di").then(resolvedValue).catch(rejectedValue).finally(finalValue);
 
 // handling error with try-catch
-const checkError = async () => {
+const checkError = async (keyword) => {
   try {
-    const filteredNames = await filterName("do");
+    const filteredNames = await filterName(keyword);
     console.log("Here is the list of name: ");
     console.log(filteredNames);
   } catch (error) {
@@ -83,4 +56,4 @@ const checkError = async () => {
     }, 1000);
   }
 };
-checkError();
+checkError("UM");

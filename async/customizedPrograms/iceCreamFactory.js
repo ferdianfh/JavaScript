@@ -1,33 +1,6 @@
 // * Case 3: Program 2 - Ice Cream Factory
 
-const stocks = {
-  flavours: [
-    "Strawberry",
-    "Chocolate",
-    "Vanilla",
-    "Matcha",
-    "Salted Egg",
-    "Wasabi",
-    "Honey",
-    "Red Bean",
-    "Taro",
-    "Sweet Potato",
-    "Jasmine Flower",
-    "Squid Ink",
-  ],
-  toppings: [
-    "Crackers",
-    "Squid",
-    "Ketchup",
-    "Anchovies",
-    "Dried Seaweed",
-    "Rendang",
-    "Terasi",
-    "Takoyaki",
-    "Bacon",
-    "Scrumbled Eggs",
-  ],
-};
+const { stocks } = require("./database");
 
 const order = (flavour, topping) => {
   return new Promise((resolve, reject) => {
@@ -81,15 +54,15 @@ const finalValue = () => {
   }, 6000);
 };
 
-order("lavender", "squid")
+order("strawberry", "squid")
   .then(resolvedValue)
   .catch(rejectedValue)
   .finally(finalValue);
 
 // handling error with try-catch
-const checkError = async () => {
+const checkError = async (flavour, topping) => {
   try {
-    const checkingStock = await order("choco", "raisin");
+    const checkingStock = await order(flavour, topping);
     console.log(checkingStock);
     console.log("Stock is ready. You can order the Ice Cream!");
   } catch (error) {
@@ -100,4 +73,4 @@ const checkError = async () => {
     }, 1000);
   }
 };
-checkError();
+checkError("cocho", "almond");
